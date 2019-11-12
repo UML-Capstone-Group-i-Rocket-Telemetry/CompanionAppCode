@@ -22,6 +22,30 @@ namespace TelemetryCompanionApp
         public WindowPrevFlight()
         {
             InitializeComponent();
+            RebindData();
+            SetTimer();
+            
+        }
+        //Refreshes grid data on timer tick
+        protected void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            RebindData();
+        }
+
+        //Get data and bind to the grid
+        private void RebindData()
+        {
+            List<TelemetryData> dataFromCSV = TelemetryData.ReadFile(@"C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\Flight Files\test.csv");
+            dataGrid.ItemsSource = dataFromCSV;
+        }
+
+        //Set and start the timer
+        private void SetTimer()
+        {
+            var dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 30);
+            dispatcherTimer.Start();
         }
     }
 }

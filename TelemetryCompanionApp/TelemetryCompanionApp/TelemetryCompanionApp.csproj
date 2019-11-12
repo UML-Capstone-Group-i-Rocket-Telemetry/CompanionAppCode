@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TelemetryData.cs" />
     <Compile Include="PreviousFlightWindow.xaml.cs">
       <DependentUpon>PreviousFlightWindow.xaml</DependentUpon>
     </Compile>
@@ -101,7 +102,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Flight Files\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\UML_Logo.png" />
   </ItemGroup>

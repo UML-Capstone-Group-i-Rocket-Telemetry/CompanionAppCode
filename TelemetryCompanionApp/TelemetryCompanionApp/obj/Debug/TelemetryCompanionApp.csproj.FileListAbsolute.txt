@@ -10,8 +10,8 @@ C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCom
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.g.resources
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.Properties.Resources.resources
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.csproj.GenerateResource.cache
-C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.csproj.CoreCompileInputs.cache
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.exe
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.pdb
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\PreviousFlightWindow.g.cs
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\PreviousFlightWindow.baml
+C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\GeneratedInternalTypeHelper.g.cs

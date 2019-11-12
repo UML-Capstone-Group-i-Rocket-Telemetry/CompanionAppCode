@@ -6,5 +6,14 @@
         xmlns:local="clr-namespace:TelemetryCompanionApp"
         mc:Ignorable="d"
         Title="Previous Flights" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Maximized">
-    <Grid Width="1600" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF646464"/>
+    <Grid Width="1600" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF646464">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="50,0,50,650" VerticalAlignment="Center" Width="1500"
+            ItemsSource="{Binding dataFromCSV}" AutoGenerateColumns="False" Height="100" IsSynchronizedWithCurrentItem="False">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Time (s)" Binding="{Binding Time}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Temperture (F)" Binding="{Binding Temperture}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Velocity (m/s)" Binding="{Binding Velocity}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </Window>
