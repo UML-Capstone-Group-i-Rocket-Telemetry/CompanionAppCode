@@ -13,10 +13,8 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="titleText" Margin="0,0,0,200" TextWrapping="Wrap" Text="UML Rocketry Club Telemetry Companion App" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Foreground="#FF004CFF" Grid.Column="2" Height="38" Width="613"/>
-        <Button x:Name="btnPrevFlights" Content="Previous Flights" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="100" Grid.Column="2" Height="20" Cursor="Arrow" Click="NavToPreviousFlight"/>
-        <Button x:Name="btnImportExport" Content="Import/Export" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Margin="0,0,500,0" Grid.Column="2" Height="20" Cursor="Arrow"/>
-        <Button x:Name="btnRealTime" Content="Real Time Flight" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Margin="500,0,0,0" Grid.Column="2" Height="20" Cursor="Arrow"/>
+        <TextBlock x:Name="titleText" Margin="0,280,0,480" TextWrapping="Wrap" Text="UML Rocketry Club Telemetry Companion App" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Foreground="#FF004CFF" Grid.Column="2" Height="38" Width="555"/>
+        <Button x:Name="btnPrevFlights" Content="Start" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="100" Grid.Column="2" Height="20" Cursor="Arrow" Click="NavToPreviousFlight"/>
         <Image x:Name="logoUML" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,400" Source="Images/UML_Logo.png" Width="96" Height="120" Grid.Column="2">
             <Image.DataContext>
                 <PngBitmapEncoder/>

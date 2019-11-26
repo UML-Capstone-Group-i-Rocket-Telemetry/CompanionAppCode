@@ -4,16 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TelemetryCompanionApp"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="Previous Flights" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Maximized">
     <Grid Width="1600" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF646464">
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="50,0,50,650" VerticalAlignment="Center" Width="1500"
-            ItemsSource="{Binding dataFromCSV}" AutoGenerateColumns="False" Height="100" IsSynchronizedWithCurrentItem="False">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="50,0,50,500" VerticalAlignment="Center" Width="1500"
+            ItemsSource="{Binding dataFromCSV}" AutoGenerateColumns="False" Height="200" IsSynchronizedWithCurrentItem="False">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Time (s)" Binding="{Binding Time}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Temperture (F)" Binding="{Binding Temperture}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Velocity (m/s)" Binding="{Binding Velocity}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="SelectFlight" Content="Select Flight" HorizontalAlignment="Left" Margin="50,26,0,0"
+                VerticalAlignment="Top" Width="75" Click="BtnOpenFile_Click"/>
+        <lvc:CartesianChart x:Name="middleGraph" Series="{Binding SeriesCollectionMid}" Width="475" Height="450" Margin="0,300,0,0" />
+        <lvc:CartesianChart x:Name="leftGraph" Series="{Binding SeriesCollectionLeft}" Width="475" Height="450" Margin="0,300,1050,0" />
+        <lvc:CartesianChart x:Name="rightGraph" Series="{Binding SeriesCollectionRight}" Width="475" Height="450" Margin="1050,300,0,0" />
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="50,280,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="Option1">Static</ComboBoxItem>
+            <ComboBoxItem x:Name="Option2">2 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option3">5 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option4">10 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option5">30 Seconds</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="50,260,0,0" TextWrapping="Wrap" Text="Refresh Rate" VerticalAlignment="Top" Width="120" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
     </Grid>
 </Window>
