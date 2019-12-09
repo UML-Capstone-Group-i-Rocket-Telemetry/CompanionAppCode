@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TelemetryCompanionApp"
         xmlns:RuntimeBinder="clr-namespace:Microsoft.CSharp.RuntimeBinder;assembly=Microsoft.CSharp" x:Class="TelemetryCompanionApp.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Maximized">
+        Title="MainWindow" Height="800" Width="1600" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Maximized">
     <Grid Background="#FF646464" Width="1600" Height="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>

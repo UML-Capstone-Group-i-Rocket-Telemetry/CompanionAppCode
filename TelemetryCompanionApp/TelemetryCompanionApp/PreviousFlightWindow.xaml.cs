@@ -43,6 +43,18 @@ namespace TelemetryCompanionApp
                 Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { }
             },
         };
+        protected SeriesCollection seriesCollectionMid = new SeriesCollection {
+            new LineSeries
+            {
+                Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { }
+            },
+        };
+        protected SeriesCollection seriesCollectionRight = new SeriesCollection {
+            new LineSeries
+            {
+                Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { }
+            },
+        };
 
         //Refreshes grid data on timer tick
         protected void DispatcherTimer_Tick(object sender, EventArgs e)
@@ -82,11 +94,219 @@ namespace TelemetryCompanionApp
                 List<TelemetryData> dataFromCSV = TelemetryData.ReadFile(this.FileName);
                 dataGrid.ItemsSource = dataFromCSV;
                 ResetCharts();
-                for (int i = 0; i < dataFromCSV.Count; i++)
+                if (Option1Graph1.IsSelected == true)
                 {
-                    seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, dataFromCSV[i].Velocity));
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationX, 2)));
+                    }
+                }
+                else if (Option2Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationY, 2)));
+                    }
+                }
+                else if (Option3Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationZ, 2)));
+                    }
+                }
+                else if (Option4Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentX, 2)));
+                    }
+                }
+                else if (Option5Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentY, 2)));
+                    }
+                }
+                else if (Option6Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentZ, 2)));
+                    }
+                }
+                else if (Option7Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Pressure, 2)));
+                    }
+                }
+                else if (Option8Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Altitude, 2)));
+                    }
+                }
+                else if (Option9Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempC, 2)));
+                    }
+                }
+                else if (Option10Graph1.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionLeft[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempF, 2)));
+                    }
                 }
                 leftGraph.Series = seriesCollectionLeft;
+                if (Option1Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationX, 2)));
+                    }
+                }
+                else if (Option2Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationY, 2)));
+                    }
+                }
+                else if (Option3Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationZ, 2)));
+                    }
+                }
+                else if (Option4Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentX, 2)));
+                    }
+                }
+                else if (Option5Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentY, 2)));
+                    }
+                }
+                else if (Option6Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentZ, 2)));
+                    }
+                }
+                else if (Option7Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Pressure, 2)));
+                    }
+                }
+                else if (Option8Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Altitude, 2)));
+                    }
+                }
+                else if (Option9Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempC, 2)));
+                    }
+                }
+                else if (Option10Graph2.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionMid[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempF, 2)));
+                    }
+                }
+                middleGraph.Series = seriesCollectionMid;
+                if (Option1Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationX, 2)));
+                    }
+                }
+                else if (Option2Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationY, 2)));
+                    }
+                }
+                else if (Option3Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AccelerationZ, 2)));
+                    }
+                }
+                else if (Option4Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentX, 2)));
+                    }
+                }
+                else if (Option5Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentY, 2)));
+                    }
+                }
+                else if (Option6Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].AngMomentZ, 2)));
+                    }
+                }
+                else if (Option7Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Pressure, 2)));
+                    }
+                }
+                else if (Option8Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].Altitude, 2)));
+                    }
+                }
+                else if (Option9Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempC, 2)));
+                    }
+                }
+                else if (Option10Graph3.IsSelected == true)
+                {
+                    for (int i = 0; i < dataFromCSV.Count; i++)
+                    {
+                        seriesCollectionRight[0].Values.Add(new LiveCharts.Defaults.ObservablePoint(dataFromCSV[i].Time, Math.Round(dataFromCSV[i].TempF, 2)));
+                    }
+                }
+                rightGraph.Series = seriesCollectionRight;
             }
         }
 
@@ -113,6 +333,8 @@ namespace TelemetryCompanionApp
         private void ResetCharts()
         {
             seriesCollectionLeft[0].Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { };
+            seriesCollectionRight[0].Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { };
+            seriesCollectionMid[0].Values = new ChartValues<LiveCharts.Defaults.ObservablePoint> { };
         }
     }
 }
