@@ -1,0 +1,81 @@
+﻿<Window x:Class="TelemetryCompanionApp.WindowPrevFlight"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelemetryCompanionApp"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="Previous Flights" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowState="Maximized">
+    <Grid Width="1600" Height="800" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF646464">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="50,0,50,500" VerticalAlignment="Center" Width="1500"
+            ItemsSource="{Binding dataFromCSV}" AutoGenerateColumns="False" Height="200" IsSynchronizedWithCurrentItem="False">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Time (sec)" Binding="{Binding Time}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Acceleration X (m/s^2)" Binding="{Binding AccelerationX}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Acceleration Y (m/s^2)" Binding="{Binding AccelerationY}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Acceleration Z (m/s^2)" Binding="{Binding AccelerationZ}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Angular Momentum X (rad/s)" Binding="{Binding AngMomentX}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Angular Momentum Y (rad/s)" Binding="{Binding AngMomentY}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Angular Momentum Z (rad/s)" Binding="{Binding AngMomentZ}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Temp (C)" Binding="{Binding TempC}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Temp (F)" Binding="{Binding TempF}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Pressure (Pascals)" Binding="{Binding Pressure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Altitude (meters)" Binding="{Binding Altitude}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Orientation" Binding="{Binding Orientation}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="SelectFlight" Content="Select Flight" HorizontalAlignment="Left" Margin="50,26,0,0"
+                VerticalAlignment="Top" Width="75" Click="BtnOpenFile_Click"/>
+        <lvc:CartesianChart x:Name="middleGraph" Series="{Binding SeriesCollectionMid}" Width="475" Height="450" Margin="0,300,0,0" />
+        <lvc:CartesianChart x:Name="leftGraph" Series="{Binding SeriesCollectionLeft}" Width="475" Height="450" Margin="0,300,1050,0" />
+        <lvc:CartesianChart x:Name="rightGraph" Series="{Binding SeriesCollectionRight}" Width="475" Height="450" Margin="1050,300,0,0" />
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="50,266,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="Option1">Static</ComboBoxItem>
+            <ComboBoxItem x:Name="Option2">2 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option3">5 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option4">10 Seconds</ComboBoxItem>
+            <ComboBoxItem x:Name="Option5">30 Seconds</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxGraph1" HorizontalAlignment="Left" Margin="50,305,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="Option1Graph1">Acceleration X</ComboBoxItem>
+            <ComboBoxItem x:Name="Option2Graph1">Acceleration Y</ComboBoxItem>
+            <ComboBoxItem x:Name="Option3Graph1">Acceleration Z</ComboBoxItem>
+            <ComboBoxItem x:Name="Option4Graph1">Angular Monementum X</ComboBoxItem>
+            <ComboBoxItem x:Name="Option5Graph1">Angular Monementum Y</ComboBoxItem>
+            <ComboBoxItem x:Name="Option6Graph1">Angular Monementum Z</ComboBoxItem>
+            <ComboBoxItem x:Name="Option7Graph1">Pressure</ComboBoxItem>
+            <ComboBoxItem x:Name="Option8Graph1">Altitude</ComboBoxItem>
+            <ComboBoxItem x:Name="Option9Graph1">Temperture Celsius</ComboBoxItem>
+            <ComboBoxItem x:Name="Option10Graph1">Temperture Fahrenheit</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxGraph2" HorizontalAlignment="Left" Margin="586,305,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="Option1Graph2" Content="Acceleration X"/>
+            <ComboBoxItem x:Name="Option2Graph2" Content="Acceleration Y"/>
+            <ComboBoxItem x:Name="Option3Graph2" Content="Acceleration Z"/>
+            <ComboBoxItem x:Name="Option4Graph2" Content="Angular Monementum X"/>
+            <ComboBoxItem x:Name="Option5Graph2" Content="Angular Monementum Y"/>
+            <ComboBoxItem x:Name="Option6Graph2" Content="Angular Monementum Z"/>
+            <ComboBoxItem x:Name="Option7Graph2" Content="Pressure"/>
+            <ComboBoxItem x:Name="Option8Graph2" Content="Altitude"/>
+            <ComboBoxItem x:Name="Option9Graph2" Content="Temperture Celsius"/>
+            <ComboBoxItem x:Name="Option10Graph2" Content="Temperture Fahrenheit"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxGraph3" HorizontalAlignment="Left" Margin="1112,303,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="Option1Graph3" Content="Acceleration X"/>
+            <ComboBoxItem x:Name="Option2Graph3" Content="Acceleration Y"/>
+            <ComboBoxItem x:Name="Option3Graph3" Content="Acceleration Z"/>
+            <ComboBoxItem x:Name="Option4Graph3" Content="Angular Monementum X"/>
+            <ComboBoxItem x:Name="Option5Graph3" Content="Angular Monementum Y"/>
+            <ComboBoxItem x:Name="Option6Graph3" Content="Angular Monementum Z"/>
+            <ComboBoxItem x:Name="Option7Graph3" Content="Pressure"/>
+            <ComboBoxItem x:Name="Option8Graph3" Content="Altitude"/>
+            <ComboBoxItem x:Name="Option9Graph3" Content="Temperture Celsius"/>
+            <ComboBoxItem x:Name="Option10Graph3" Content="Temperture Fahrenheit"/>
+        </ComboBox>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="50,250,0,0" TextWrapping="Wrap" Text="Refresh Rate" VerticalAlignment="Top" Width="120" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="50,288,0,0" TextWrapping="Wrap" Text="Graph 1 Selection" VerticalAlignment="Top" Width="120" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="586,288,0,0" TextWrapping="Wrap" Text="Graph 2 Selection" VerticalAlignment="Top" Width="120" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="1112,288,0,0" TextWrapping="Wrap" Text="Graph 3 Selection" VerticalAlignment="Top" Width="120" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+    </Grid>
+</Window>
