@@ -25,13 +25,13 @@ namespace TelemetryCompanionApp
             InitializeComponent();
         }
         /// <summary>
-        /// This function opens the previous flights window and closes the current window.
+        /// This function opens the flight window and closes the current window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void NavToPreviousFlight(object sender, RoutedEventArgs e)
+        private void NavToFlightWindow(object sender, RoutedEventArgs e)
         {
-            WindowPrevFlight newWin = new WindowPrevFlight();
+            WindowFlight newWin = new WindowFlight();
             newWin.Show();
             this.Close();
         }
