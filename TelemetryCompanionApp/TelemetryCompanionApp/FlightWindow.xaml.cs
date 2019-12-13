@@ -21,7 +21,7 @@ namespace TelemetryCompanionApp
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class WindowPrevFlight : Window
+    public partial class WindowFlight : Window
     {
         //Array corresponds to time
         public String FileName { get; set; }
@@ -30,7 +30,7 @@ namespace TelemetryCompanionApp
         //Timer
         public System.Windows.Threading.DispatcherTimer Timer{ get; set; }
 
-        public WindowPrevFlight()
+        public WindowFlight()
         {
             InitializeComponent();
             this.RefreshRate = 0;
@@ -62,18 +62,18 @@ namespace TelemetryCompanionApp
             if(Option1.IsSelected == true)
             {
                 this.RefreshRate = 0;
-            } 
-            else if (Option2.IsSelected == true) 
+            }
+            else if (Option2.IsSelected == true)
             {
-                this.RefreshRate = 2;
+                this.RefreshRate = 10;
             }
             else if (Option3.IsSelected == true)
             {
-                this.RefreshRate = 5;
+                this.RefreshRate = 15;
             }
             else if (Option4.IsSelected == true)
             {
-                this.RefreshRate = 10;
+                this.RefreshRate = 20;
             }
             else if (Option5.IsSelected == true)
             {
@@ -324,7 +324,7 @@ namespace TelemetryCompanionApp
         private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true) { 
+            if (openFileDialog.ShowDialog() == true) {
                 this.FileName = openFileDialog.FileName;
                 RebindData();
             }

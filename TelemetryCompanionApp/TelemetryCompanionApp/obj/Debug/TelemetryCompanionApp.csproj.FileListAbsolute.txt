@@ -12,8 +12,6 @@ C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCom
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.csproj.GenerateResource.cache
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.exe
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.pdb
-C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\PreviousFlightWindow.g.cs
-C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\PreviousFlightWindow.baml
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\bin\Debug\LiveCharts.dll
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\bin\Debug\LiveCharts.Wpf.dll
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\bin\Debug\LiveCharts.pdb
@@ -21,3 +19,5 @@ C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCom
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\TelemetryCompanionApp.csproj.CopyComplete
+C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\FlightWindow.g.cs
+C:\Users\tedca\Documents\Git\CompanionAppCode\TelemetryCompanionApp\TelemetryCompanionApp\obj\Debug\FlightWindow.baml
