@@ -1,5 +1,7 @@
 # CompanionAppCode
 This repository contains the code for the companion app.
+This repository is located at:
+https://github.com/UML-Capstone-Group-i-Rocket-Telemetry
 The companion app was written using visual studios. In this repository is the
 entire visual studios project.
 
